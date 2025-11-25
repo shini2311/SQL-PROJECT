@@ -1,173 +1,140 @@
 <h1 style="font-size:42px; text-align:left; font-weight:700;">
 Retail Sales Analysis – SQL Project
 </h1>
-<h2 style="font-size:42px;">
-  Project Overview 
-</h2>
-<b> Project Title: </b> Retail sales Analysis 
+<h2>1. Project Overview</h2>
 
-<b> Database: </b> Kaggle
+This project focuses on analyzing the retail sales data provided by the client to uncover meaningful business insights. Using SQL, the raw transaction data was cleaned, structured, and evaluated to understand customer behavior, product performance, revenue patterns, and operational efficiency. The analysis supports data-driven decision-making across sales, marketing, and inventory management.
 
-This project analyzes the retail sales dataset provided by the client using SQL. The data was cleaned, structured, and transformed to ensure accuracy and consistency. Key SQL queries were used to identify sales trends, customer behavior, and product performance. The insights support better decision-making in inventory planning, marketing, and branch operations. Overall, the project delivers a clear data-driven view of business performance.
+<h2>2. Objective</h2>
 
-<h2> Objectives</h2>
+• To analyze the sales transactions and understand key performance drivers.
 
-<b>Data Cleaning:</b> Identify and remove any records with missing or null values.
+• To identify trends in customer demographics, product demand, and purchase behavior.
 
-<b>Exploratory Data Analysis (EDA):</b> Perform basic exploratory data analysis to understand the dataset.
+• To help the client improve sales strategy, stocking decisions, and marketing targeting.
 
-<b>Business Analysis:</b> Use SQL to answer specific business questions and derive insights from the sales data.
+• To deliver actionable insights using SQL-based analysis.
 
-<h2 style="font-size:42px;">
-  Project Structure
-</h2>
-<h3> 1. Database Setup</h3>
-<b>  • Database Creation</b>The project starts by creating a database named sales.
+<h2>3. Data Summary</h2>
 
-<b>  • Table Creation</b>A table named retail_sales_data is created to store the sales data.The table structure includes columns for transactions ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+The dataset contained 2,000 retail transactions with the following fields:
+<ol>
+• transactions_id
 
-```
-CREATE DATABASE sales;
+• sale_date, sale_time
 
-CREATE TABLE retail_sales_data
-(
-   transactions_id int PRIMARY KEY,
-   sale_date date,	
-   sale_time time,
-   customer_id	int,
-   gender varchar(20),
-   age int,
-   category varchar(20),	
-   quantity	 int,
-   price_per_unit float,	
-   cogs	float,
-   total_sale float
-	);
-```
-<h3>2. Data Exploration & Cleaning</h3>
+• customer_id, gender, age
 
-<b>  • Record Count:</b> Determine the total number of records in the dataset.
+• category (product category)
 
-<b>  • Customer Count:</b> Find out how many unique customers are in the dataset.
+• quantiy
 
-<b>  • Category Count:</b> Identify all unique product categories in the dataset.
+• price_per_unit
 
-<b>  • Null Value Check:</b> Check for any null values in the dataset and delete records with missing data.
+• cogs
 
-```
-SELECT  SUM(transactions_id)  FROM retail_sales_data;
-```
+• total_sale
+</ol>
 
-```
-SELECT COUNT(*) FROM retail_sales_data;
-```
-```
-SELECT DISTINCT category FROM retail_sales_data;
-```
-```
-SELECT * FROM retail_sales_data
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 
-DELETE FROM retail_sales_data
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
-```
+The data showed good consistency with minimal missing values (only 3 missing in total_sale).
 
-<h2>3. Data Analysis & Findings</h2>
+<h2>4. SQL Tasks Completed</h2>
+✔ Data Cleaning
 
-<b>1. A SQL query to calculate the total sales (total_sale) for each category</b>
-```
-SELECT 
-    category,
-    SUM(total_sale) as Total_Sales,
-    COUNT(*) as Total_Orders
-FROM retail_sales_data
-GROUP BY category;
-```
+Handled missing values
 
-<b>2. A SQL query to find the average age of customers who purchased items from the 'Beauty' category</b>
+Verified numeric formats (quantity, price, cogs, total_sale)
 
-```
-SELECT category, avg(age) FROM retail_sales_data WHERE category='Beauty';
-<b> Write a SQL query to find all transactions where the total_sale is greater than 1000.
-SELECT * FROM retail_sales_data WHERE total_sale > 1000;
-```
+Standardized date and time fields
 
-<b>3. A SQL query to find the total number of transactions (transaction_id) made by each gender in each category</b>
-```
-SELECT 
-    category,
-    gender,
-    COUNT(*) as Total_Transactions
-FROM retail_sales_data
-GROUP 
-    BY 
-    category,
-    gender
-ORDER BY category
-```
-<b>4. A SQL query to find all transactions where the total_sale is greater than 1000.</b>
-```
-SELECT * FROM retail_sales_data WHERE total_sale > 1000;
-```
-<b>5. A SQL query to find the total number of transactions (transaction_id) made by each gender in each category.</b>
-```
-SELECT gender,category, SUM(transactions_id) AS TRANSACTION FROM retail_sales_data GROUP BY gender , category ORDER BY 1;
+✔ Data Transformation
 
-```
-<b>6. A SQL query to find the top 5 customers based on the highest total sales  </b>
-```
-SELECT customer_id, SUM(total_sale) AS TOTAL_SALE FROM retail_sales_data  GROUP BY customer_id ORDER BY TOTAL_SALE DESC LIMIT 5;
-```
-<b>7. A SQL query to find the number of unique customers who purchased items from each category.</b>
-```
-SELECT category, COUNT(*) AS CUSTOMERS FROM retail_sales_data GROUP BY category;
-```
-<b>8. A  SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17) </b>
-```
-WITH hourly_sale AS (
-SELECT *, CASE
-        WHEN EXTRACT(HOUR FROM sale_time) < 12 THEN 'Morning'
-        WHEN EXTRACT(HOUR FROM sale_time) BETWEEN 12 AND 17 THEN 'Afternoon'
-        ELSE 'Evening'
-    END as shift FROM retail_sales_data
-)
-SELECT shift,COUNT(*) as total_orders FROM hourly_sale GROUP BY shift;
-```
-<b>9. Which category has the highest total sales overall </b>
-```
-SELECT category,SUM(total_sale) AS TOTAL_SALES FROM retail_sales_data GROUP BY category ORDER BY TOTAL_SALES DESC;
+Created computed fields (revenue by category, age group segmentation)
 
-```
-<b>10. Which day of the week has the maximum number of transactions</b>
-```
-SELECT 
-    DATE_FORMAT(sale_date, '%W') AS day_of_week,
-    COUNT(*) AS transaction_count
-FROM retail_sales_data
-GROUP BY day_of_week
-ORDER BY transaction_count DESC;
-```
+Extracted day, month, hour from sale_date and sale_time
 
-<h2>4. Outcomes</h2>
+Aggregated transactions for business KPIs
 
-  • Identified the best-selling categories and highest revenue products.
+✔ Analysis Queries
 
-  • Found the peak sales months, days, and times.
+Total revenue, average order values, and category-wise performance
 
-  • Highlighted top customers based on total spending.
+Customer demographic insights (gender & age patterns)
 
-  • Understood sales patterns across age, gender, and location.
+Peak shopping hours and popular purchase days
 
-  • Improved skills in SQL querying, data cleaning, and data analysis.
+High-value customers identification
 
-  • Generated insights useful for business planning and decision-making.
+Pricing and quantity patterns
 
-<h2>5 Conclusion</h2>
+<h2>5. Key Insights from the Analysis</h2>
 
-The retail sales analysis helped uncover the store’s key sales patterns, top-performing categories, and customer behavior trends. By using SQL, the data was cleaned, explored, and transformed into meaningful insights that can support better business decisions. Overall, the project demonstrates strong skills in SQL querying, data handling, and real-world analytical thinking.
+Based on the SQL analysis and dataset evaluation, the following insights were identified:
+
+1️⃣ Strongest Performing Product Categories
+
+Clothing and Beauty were among the top-selling categories by quantity and revenue.
+
+High-value items (500–2000 per unit) drove significant revenue.
+
+2️⃣ Customer Demographics
+
+Sales are balanced between males and females, with no extreme skew.
+
+Majority of customers fall in the 25–50 age group, indicating a working-age buyer segment.
+
+3️⃣ Revenue Trends
+
+Average revenue per transaction: ₹456
+
+High-variation revenue (min ₹25 to max ₹2000) indicates multiple pricing tiers.
+
+4️⃣ Purchase Patterns
+
+Most purchases involve 3–4 units per transaction.
+
+Many high-value purchases are clustered around specific hours (morning + evening).
+
+5️⃣ Cost & Margin Behaviour
+
+COGS values vary significantly, pointing to mixed product margins.
+
+Pricing strategy appears diversified across categories.
+
+<h2>6. Business Impact & How It Helps the Client</h2>
+🔹 Inventory Planning
+
+Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
+
+🔹 Marketing Strategy
+
+Demographic insights allow targeted campaigns (age groups, gender trends).
+
+🔹 Operational Improvements
+
+Peak hour analysis supports better staffing and scheduling.
+
+🔹 Revenue Growth
+
+Understanding high-revenue categories guides product prioritization and promotions.
+
+🔹 Customer Insights
+
+Identifying repeat purchase behavior and high-value customers helps retention strategies.
+
+<h2>7. Recommendations</h2>
+
+Increase stock levels for high-demand categories like Clothing & Beauty.
+
+Run targeted promotions for the 25–50 age group.
+
+Adjust staff allocation during peak shopping hours.
+
+Review pricing strategy for categories with low margins.
+
+Introduce loyalty programs to improve customer retention.
+
+<h2>8. Conclusion</h2>
+
+This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. The insights identified from the dataset support strategic planning across inventory, marketing, and operations. The client can use these findings to improve business efficiency and drive long-term growth.
