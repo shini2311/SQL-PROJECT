@@ -22,9 +22,9 @@ This project analyzes the retail sales dataset provided by the client using SQL.
   Project Structure
 </h2>
 <h3> 1. Database Setup</h3>
-<b>• Database Creation</b>The project starts by creating a database named sales.
+<b>  • Database Creation</b>The project starts by creating a database named sales.
 
-<b>• Table Creation</b>A table named retail_sales_data is created to store the sales data.The table structure includes columns for transactions ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+<b>  • Table Creation</b>A table named retail_sales_data is created to store the sales data.The table structure includes columns for transactions ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```
 CREATE DATABASE sales;
@@ -46,13 +46,13 @@ CREATE TABLE retail_sales_data
 ```
 <h3>2. Data Exploration & Cleaning</h3>
 
-<b>• Record Count:</b> Determine the total number of records in the dataset.
+<b>  • Record Count:</b> Determine the total number of records in the dataset.
 
-<b>• Customer Count:</b> Find out how many unique customers are in the dataset.
+<b>  • Customer Count:</b> Find out how many unique customers are in the dataset.
 
-<b>• Category Count:</b> Identify all unique product categories in the dataset.
+<b>  • Category Count:</b> Identify all unique product categories in the dataset.
 
-<b>•Null Value Check:</b> Check for any null values in the dataset and delete records with missing data.
+<b>  • Null Value Check:</b> Check for any null values in the dataset and delete records with missing data.
 
 ```
 SELECT  SUM(transactions_id)  FROM retail_sales_data;
@@ -78,7 +78,7 @@ WHERE
     quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 ```
 
-<h3>3. Data Analysis & Findings</h3>
+<h2>3. Data Analysis & Findings</h2>
 
 <b>1. A SQL query to calculate the total sales (total_sale) for each category</b>
 ```
@@ -154,15 +154,15 @@ GROUP BY day_of_week
 ORDER BY transaction_count DESC;
 ```
 
-<h3> Findings</h3>
-• Identified the best-selling categories and highest revenue products.
+<h2>4. Findings</h2>
+  • Identified the best-selling categories and highest revenue products.
 
-• Found the peak sales months, days, and times.
+  • Found the peak sales months, days, and times.
 
-• Highlighted top customers based on total spending.
+  • Highlighted top customers based on total spending.
 
-• Understood sales patterns across age, gender, and location.
+  • Understood sales patterns across age, gender, and location.
 
-•Improved skills in SQL querying, data cleaning, and data analysis.
+  • Improved skills in SQL querying, data cleaning, and data analysis.
 
-• Generated insights useful for business planning and decision-making.
+  • Generated insights useful for business planning and decision-making.
