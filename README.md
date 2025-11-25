@@ -8,6 +8,7 @@ This project focuses on analyzing the retail sales data provided by the client t
 <h2>2. Objective</h2>
 
 <ol>
+  
   • To analyze the sales transactions and understand key performance drivers.
 
   • To identify trends in customer demographics, product demand, and purchase behavior.
@@ -21,8 +22,8 @@ This project focuses on analyzing the retail sales data provided by the client t
 
 The dataset contained 2,000 retail transactions with the following fields:
 <ol>
+  
 • transactions_id
-
 
 • sale_date, sale_time
 
