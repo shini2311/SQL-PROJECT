@@ -44,6 +44,7 @@ The dataset contained 2,000 retail transactions with the following fields:
 The data showed good consistency with minimal missing values (only 3 missing in total_sale).
 
 <h2>4. SQL Tasks Completed</h2>
+
 <h3>4.1 Data Cleaning</h3>
 
 <ol>
@@ -54,6 +55,7 @@ The data showed good consistency with minimal missing values (only 3 missing in 
 
   • Standardized date and time fields
 </ol>
+
 
 <h3>4.2 Data Transformation</h3>
 
@@ -66,7 +68,10 @@ The data showed good consistency with minimal missing values (only 3 missing in 
  • Aggregated transactions for business KPIs
 </ol>
 
+
 <h3>4.3 Analysis Queries</h3>
+
+
 
 <ol>
 
@@ -81,9 +86,11 @@ The data showed good consistency with minimal missing values (only 3 missing in 
  • Pricing and quantity patterns
 </ol>
 
+
 <h2>5. Key Insights from the Analysis</h2>
 
-Based on the SQL analysis and dataset evaluation, the following insights were identified:
+
+<b> Based on the SQL analysis and dataset evaluation, the following insights were identified:</b>
 
 1️⃣ Strongest Performing Product Categories
 
@@ -115,7 +122,9 @@ COGS values vary significantly, pointing to mixed product margins.
 
 Pricing strategy appears diversified across categories.
 
+
 <h2>6. Business Impact & How It Helps the Client</h2>
+
 🔹 Inventory Planning
 
 Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
