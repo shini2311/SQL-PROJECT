@@ -44,33 +44,42 @@ The dataset contained 2,000 retail transactions with the following fields:
 The data showed good consistency with minimal missing values (only 3 missing in total_sale).
 
 <h2>4. SQL Tasks Completed</h2>
-✔ Data Cleaning
+<h3>4.1 Data Cleaning</h3>
 
-Handled missing values
+<ol>
 
-Verified numeric formats (quantity, price, cogs, total_sale)
+  • Handled missing values
 
-Standardized date and time fields
+  • Verified numeric formats (quantity, price, cogs, total_sale)
 
-✔ Data Transformation
+  • Standardized date and time fields
+</ol>
 
-Created computed fields (revenue by category, age group segmentation)
+<h3>4.2 Data Transformation</h3>
 
-Extracted day, month, hour from sale_date and sale_time
+<ol>
 
-Aggregated transactions for business KPIs
+ • Created computed fields (revenue by category, age group segmentation)
 
-✔ Analysis Queries
+ • Extracted day, month, hour from sale_date and sale_time
 
-Total revenue, average order values, and category-wise performance
+ • Aggregated transactions for business KPIs
+</ol>
 
-Customer demographic insights (gender & age patterns)
+<h3>4.3 Analysis Queries</h3>
 
-Peak shopping hours and popular purchase days
+<ol>
 
-High-value customers identification
+ • Total revenue, average order values, and category-wise performance
 
-Pricing and quantity patterns
+ • Customer demographic insights (gender & age patterns)
+
+ • Peak shopping hours and popular purchase days
+
+ • High-value customers identification
+
+ • Pricing and quantity patterns
+</ol>
 
 <h2>5. Key Insights from the Analysis</h2>
 
