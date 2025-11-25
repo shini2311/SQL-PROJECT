@@ -154,7 +154,8 @@ GROUP BY day_of_week
 ORDER BY transaction_count DESC;
 ```
 
-<h2>4. Findings</h2>
+<h2>4. Outcomes</h2>
+
   • Identified the best-selling categories and highest revenue products.
 
   • Found the peak sales months, days, and times.
@@ -166,3 +167,7 @@ ORDER BY transaction_count DESC;
   • Improved skills in SQL querying, data cleaning, and data analysis.
 
   • Generated insights useful for business planning and decision-making.
+
+<h2>5 Conclusion</h2>
+
+The retail sales analysis helped uncover the store’s key sales patterns, top-performing categories, and customer behavior trends. By using SQL, the data was cleaned, explored, and transformed into meaningful insights that can support better business decisions. Overall, the project demonstrates strong skills in SQL querying, data handling, and real-world analytical thinking.
