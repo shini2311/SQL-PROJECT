@@ -160,3 +160,7 @@ Introduce loyalty programs to improve customer retention.
 <h2>8. Conclusion</h2>
 
 This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. The insights identified from the dataset support strategic planning across inventory, marketing, and operations. The client can use these findings to improve business efficiency and drive long-term growth.
+<ul style="list-style-type: disc;">
+    <li>Point one</li>
+    <li>Point two</li>
+</ul>
