@@ -128,23 +128,44 @@ The data showed good consistency with minimal missing values (only 3 missing in 
 
 1️⃣ Inventory Planning
 
-<ol>Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
+<ol>
+  
+  Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
+  
 </ol>
+
 2️⃣ Marketing Strategy
 
-Demographic insights allow targeted campaigns (age groups, gender trends).
+<ol>
+
+  Demographic insights allow targeted campaigns (age groups, gender trends).
+  
+</ol>
 
 3️⃣ Operational Improvements
 
-Peak hour analysis supports better staffing and scheduling.
+<ol>
+
+  Peak hour analysis supports better staffing and scheduling.
+
+</ol>
+
 
 4️⃣ Revenue Growth
 
-Understanding high-revenue categories guides product prioritization and promotions.
+<ol>
+
+  Understanding high-revenue categories guides product prioritization and promotions.
+  
+</ol>
 
 5️⃣ Customer Insights
 
-Identifying repeat purchase behavior and high-value customers helps retention strategies.
+<ol>
+
+  Identifying repeat purchase behavior and high-value customers helps retention strategies.
+  
+</ol>
 
 <h2>7. Recommendations</h2>
 <ol>
@@ -165,5 +186,5 @@ Identifying repeat purchase behavior and high-value customers helps retention st
 
 <h2>8. Conclusion</h2>
 
-This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. The insights identified from the dataset support strategic planning across inventory, marketing, and operations. The client can use these findings to improve business efficiency and drive long-term growth.
+     This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. The insights identified from the dataset support strategic planning across inventory, marketing, and operations. The client can use these findings to improve business efficiency and drive long-term growth.
 
