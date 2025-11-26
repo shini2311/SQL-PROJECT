@@ -16,6 +16,7 @@ This project focuses on analyzing the retail sales data provided by the client t
   • To help the client improve sales strategy, stocking decisions, and marketing targeting.
 
   • To deliver actionable insights using SQL-based analysis.
+  
 </ol>
 
 <h2>3. Data Summary</h2>
@@ -127,8 +128,8 @@ The data showed good consistency with minimal missing values (only 3 missing in 
 
 1️⃣ Inventory Planning
 
-Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
-
+<ol>Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
+</ol>
 2️⃣ Marketing Strategy
 
 Demographic insights allow targeted campaigns (age groups, gender trends).
@@ -146,6 +147,7 @@ Understanding high-revenue categories guides product prioritization and promotio
 Identifying repeat purchase behavior and high-value customers helps retention strategies.
 
 <h2>7. Recommendations</h2>
+<ol>
 
   • Increase stock levels for high-demand categories like Clothing & Beauty.
 
@@ -156,6 +158,10 @@ Identifying repeat purchase behavior and high-value customers helps retention st
   • Review pricing strategy for categories with low margins.
 
   • Introduce loyalty programs to improve customer retention.
+  
+</ol>
+
+
 
 <h2>8. Conclusion</h2>
 
