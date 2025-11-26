@@ -1,9 +1,9 @@
 -- create database --
-```
+
 CREATE DATABASE sales;
-```
--- create table retail_sales_data --
-```
+
+-- create table retail_sales_data 
+
 CREATE TABLE retail_sales_data(
    transactions_id int PRIMARY KEY,
    sale_date date,	
@@ -17,10 +17,10 @@ CREATE TABLE retail_sales_data(
    cogs	float,
    total_sale float
 	);
-```
+
 
 -- Understand the data --
-```
+
 SELECT * FROM retail_sales_data LIMIT 20 ;
 ```
 
