@@ -94,73 +94,70 @@ The data showed good consistency with minimal missing values (only 3 missing in 
 
 1️⃣ Strongest Performing Product Categories
 
-Clothing and Beauty were among the top-selling categories by quantity and revenue.
+     • Clothing and Beauty were among the top-selling categories by quantity and revenue.
 
-High-value items (500–2000 per unit) drove significant revenue.
+     • High-value items (500–2000 per unit) drove significant revenue.
 
 2️⃣ Customer Demographics
 
-Sales are balanced between males and females, with no extreme skew.
+     • Sales are balanced between males and females, with no extreme skew.
 
-Majority of customers fall in the 25–50 age group, indicating a working-age buyer segment.
+     • Majority of customers fall in the 25–50 age group, indicating a working-age buyer segment.
 
 3️⃣ Revenue Trends
 
-Average revenue per transaction: ₹456
+      • Average revenue per transaction: ₹456
 
-High-variation revenue (min ₹25 to max ₹2000) indicates multiple pricing tiers.
+      • High-variation revenue (min ₹25 to max ₹2000) indicates multiple pricing tiers.
 
 4️⃣ Purchase Patterns
 
-Most purchases involve 3–4 units per transaction.
+      • Most purchases involve 3–4 units per transaction.
 
-Many high-value purchases are clustered around specific hours (morning + evening).
+      • Many high-value purchases are clustered around specific hours (morning + evening).
 
 5️⃣ Cost & Margin Behaviour
 
-COGS values vary significantly, pointing to mixed product margins.
+      • COGS values vary significantly, pointing to mixed product margins.
 
-Pricing strategy appears diversified across categories.
+      • Pricing strategy appears diversified across categories.
 
 
 <h2>6. Business Impact & How It Helps the Client</h2>
 
-🔹 Inventory Planning
+1️⃣ Inventory Planning
 
 Identifies top-selling categories and average quantity per purchase, helping in optimal stock levels.
 
-🔹 Marketing Strategy
+2️⃣ Marketing Strategy
 
 Demographic insights allow targeted campaigns (age groups, gender trends).
 
-🔹 Operational Improvements
+3️⃣ Operational Improvements
 
 Peak hour analysis supports better staffing and scheduling.
 
-🔹 Revenue Growth
+4️⃣ Revenue Growth
 
 Understanding high-revenue categories guides product prioritization and promotions.
 
-🔹 Customer Insights
+5️⃣ Customer Insights
 
 Identifying repeat purchase behavior and high-value customers helps retention strategies.
 
 <h2>7. Recommendations</h2>
 
-Increase stock levels for high-demand categories like Clothing & Beauty.
+  • Increase stock levels for high-demand categories like Clothing & Beauty.
 
-Run targeted promotions for the 25–50 age group.
+  • Run targeted promotions for the 25–50 age group.
 
-Adjust staff allocation during peak shopping hours.
+  • Adjust staff allocation during peak shopping hours.
 
-Review pricing strategy for categories with low margins.
+  • Review pricing strategy for categories with low margins.
 
-Introduce loyalty programs to improve customer retention.
+  • Introduce loyalty programs to improve customer retention.
 
 <h2>8. Conclusion</h2>
 
 This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. The insights identified from the dataset support strategic planning across inventory, marketing, and operations. The client can use these findings to improve business efficiency and drive long-term growth.
-<ul style="list-style-type: disc;">
-    <li>Point one</li>
-    <li>Point two</li>
-</ul>
+
