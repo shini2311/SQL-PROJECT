@@ -186,5 +186,7 @@ The data showed good consistency with minimal missing values (only 3 missing in 
 
 <h2>8. Conclusion</h2>
 
-     This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. The insights identified from the dataset support strategic planning across inventory, marketing, and operations. The client can use these findings to improve business efficiency and drive long-term growth.
+     This SQL-based retail sales analysis provides a clear view of customer behavior, product demand, and revenue trends. 
+     The insights identified from the dataset support strategic planning across inventory, marketing, and operations. 
+     The client can use these findings to improve business efficiency and drive long-term growth.
 
