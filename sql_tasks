@@ -1,0 +1,62 @@
+-- create database --
+```
+CREATE DATABASE sales;
+```
+-- create table retail_sales_data --
+```
+CREATE TABLE retail_sales_data(
+   transactions_id int PRIMARY KEY,
+   sale_date date,	
+   sale_time time,
+   customer_id	int,
+   gender varchar(20),
+   age int,
+   category varchar(20),	
+   quantity	 int,
+   price_per_unit float,	
+   cogs	float,
+   total_sale float
+	);
+```
+
+-- Understand the data --
+```
+SELECT * FROM retail_sales_data LIMIT 20 ;
+```
+
+```
+SELECT * FROM retail_sales_data;
+```
+--Data Cleaning--
+```
+SELECT * FROM retail_sales_data
+WHERE 
+    transactions_id IS NULL
+    OR
+    sale_date IS NULL
+    OR 
+    sale_time IS NULL
+    OR
+    gender IS NULL
+    OR
+    category IS NULL
+    OR
+    quantity IS NULL
+    OR
+    cogs IS NULL
+    OR
+    total_sale IS NULL;
+```
+
+-- Data Exploration --
+ -- 1. How many sales we have?
+```
+    SELECT COUNT(*) as total_sale FROM retail_sales_data
+```
+  --2. How many uniuque customers we have ?
+```
+SELECT COUNT(DISTINCT customer_id) as total_sale FROM retail_sales_data
+```
+ -- 3. How many unique category are there
+
+SELECT DISTINCT category FROM retail_sales
